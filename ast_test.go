@@ -3,8 +3,8 @@ package parseutil_test
 import (
 	"testing"
 
+	"github.com/ernesto-jimenez/go-parse-utils"
 	"github.com/stretchr/testify/require"
-	"gopkg.in/src-d/go-parse-utils.v1"
 )
 
 func TestPackageAST(t *testing.T) {
