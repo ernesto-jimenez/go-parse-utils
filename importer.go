@@ -199,6 +199,7 @@ func (i *Importer) GetSourceFiles(path, srcDir string, filters FileFilters) (str
 	var filenames []string
 	filenames = append(filenames, filters.Filter(path, pkg.GoFiles, GoFile)...)
 	filenames = append(filenames, filters.Filter(path, pkg.CgoFiles, CgoFile)...)
+	filenames = append(filenames, filters.Filter(path, pkg.TestGoFiles, GoFile)...)
 
 	if len(filenames) == 0 {
 		return "", nil, fmt.Errorf("no go source files in path: %s", path)
